@@ -168,12 +168,12 @@ app.get('/', (req, res) => {
 // })
 
 //Import thre router file
-const personRoutes =  require('./routes/PersonRoutes');
-const menuItemRoutes = require('./routes/menuitemRoutes');
+const PersonRoutes =  require('./routes/PersonRoutes');
+const menuitemRoutes = require('./routes/menuitemRoutes');
 
 //Use the routers
-app.use('/person',personRoutes);
-app.use('/menu',menuItemRoutes);
+app.use('/person',PersonRoutes);
+app.use('/menu',menuitemRoutes);
 
 const PORT = process.env.PORT || 3000;
 
