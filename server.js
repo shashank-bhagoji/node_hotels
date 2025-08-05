@@ -168,7 +168,7 @@ app.get('/', (req, res) => {
 // })
 
 //Import thre router file
-const personRoutes =  require('./routes/personRoutes');
+const personRoutes =  require('./routes/PersonRoutes');
 const menuItemRoutes = require('./routes/menuItemRoutes');
 
 //Use the routers
