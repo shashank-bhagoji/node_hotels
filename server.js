@@ -66,6 +66,7 @@
 const express = require('express');
 const app = express();
 const db = require('./db'); // MongoDB connection file
+require('dotenv').config();
 
 // You can now use express.json() instead of body-parser
 app.use(express.json()); // To parse JSON in request body
@@ -174,8 +175,10 @@ const menuItemRoutes = require('./routes/menuItemRoutes');
 app.use('/person',personRoutes);
 app.use('/menu',menuItemRoutes);
 
+const PORT = process.env.PORT || 3000;
+
 // Start servermenuItemRoutes
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server running on port 3000');
 });
 
